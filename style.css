@@ -46,7 +46,7 @@ article [data-container] {
 }
 @media screen and (min-width: 600px) {
   article [data-container] {
-    margin: 8vh auto;
+    margin: 6vh auto;
   }
 }
 article [data-avatar] {
@@ -209,19 +209,19 @@ article [data-links] li a [data-button-bg] {
 }
 [data-skin="SKIN_NAME"] [data-profile-container] [data-username] {
   color: #fff;
-  text-align: center;
+  text-align: left;
   font-size: 3.8rem;
 }
 [data-skin="SKIN_NAME"] [data-profile-container] [data-description] {
   color: #fff;
   text-align: right;
   opacity: 0.8;
-  font-size: 1.1rem;
+  font-size: .8rem;
+  padding-top: .8rem;
   max-width: 100%;
-  padding-top: 1em;
 }
 [data-skin="SKIN_NAME"] [data-links] {
-  margin: 2rem 0 0 0;
+  /*margin: 2rem 0 0 0;*/
 }
 [data-skin="SKIN_NAME"] [data-links] li {
   overflow: hidden;
@@ -243,7 +243,7 @@ article [data-links] li a [data-button-bg] {
 [data-skin="SKIN_NAME"] [data-links] li a [data-button-label] {
   color: transparent;
   line-height: 1;
-  font-size: 2.7rem;
+  font-size: 2.4rem;
   transition: all 0.1s;
   display: block;
   font-family: "Perfect DOS VGA 437";
@@ -324,7 +324,7 @@ article [data-links] li a [data-button-bg] {
   color: #000;
 }
 
-------------------------------------------
+
 
 .stars {
   position: absolute;

@@ -101,14 +101,17 @@ new Vue({
 
 			links: [
 				{
-					url: "https://t.me/METAMODERN_TIMES",
-					label: "Telegram"
+					url: "https://www.tiktok.com/@metamoderntimes",
+					label: "Tiktok"
 				},
 				{
 					url: "https://twitter.com/MetamodernNFT",
 					label: "Twitter"
 				},
-
+				{
+					url: "https://t.me/METAMODERN_TIMES",
+					label: "Telegram"
+				},
 				{
 					url: "https://www.instagram.com/metamodern.nft/",
 					label: "Instagram"
@@ -116,10 +119,6 @@ new Vue({
 				{
 					url: "https://discord.gg/bsdPaxmQzc",
 					label: "Discord"
-				},
-				{
-					url: "https://mirror.xyz/0xB4b9EfDBb96b8004C05eC408A0BDb718c913f1c3",
-					label: "Mirror"
 				},
 				{
 					url: "https://metamodern-times.crew3.xyz",
