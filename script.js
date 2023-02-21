@@ -38,44 +38,43 @@ Vue.component("linkdrip-skin", {
 		}
 	},
 
-	template: `<div data-container>
-		<div data-profile-container :class="{ active: animate }">
-				<h1 data-username v-text="linkdrip.profile.name.text"></h1>
-				<div data-stream>
-				<iframe 
-				src="https://lvpr.tv?v=7073hkosnniban7j" 
-				frameborder="0" 
-				allowfullscreen 
-				allow="autoplay; 
-				encrypted-media; 
-				picture-in-picture" 
-				sandbox="allow-scripts">
-				</iframe>
-				 </div>
-				<p data-description v-text="linkdrip.profile.description.text"></p>
-		</div>
-	
-			
-		<div data-avatar-container :class="{ active: animate }">
-			<a data-avatar :href="linkdrip.profile.url" target="_blank">	
-				<img data-avatar :src="linkdrip.profile.image" />
-			</a>		
-			
-			
-			<div data-emblem>
-				<slot v-for="n in 1">{{'THIS NFT GIVES YOU POWER OVER METAMODERN TIMES'+' ! '}}</slot>
-			</div>
-		</div>
+	template: `	<div data-container>
+					<div data-profile-container :class="{ active: animate }">
+						<h1 data-username v-text="linkdrip.profile.name.text"></h1>
+						<div data-stream>
+							<iframe 
+							src="https://lvpr.tv?v=7073hkosnniban7j" 
+							frameborder="0" 
+							allowfullscreen 
+							allow="autoplay; 
+							encrypted-media; 
+							picture-in-picture" 
+							sandbox="allow-scripts">
+							</iframe>
+						</div>
+						<p data-description v-text="linkdrip.profile.description.text"></p>		
+					</div>
+					
+						<ul data-links :class="{ active: animate }">
+							<li data-link-container v-for="link in linkdrip.links" v-if="link.label !== ''">
+								<a data-link :href="link.url" target="_blank">
+									<span data-button-bg></span>
+									<span data-button-label v-text="link.label"></span>
+								</a>
+							</li>
+						</ul>
 
-			<ul data-links :class="{ active: animate }">
-				<li data-link-container v-for="link in linkdrip.links" v-if="link.label !== ''">
-					<a data-link :href="link.url" target="_blank">
-						<span data-button-bg></span>
-						<span data-button-label v-text="link.label"></span>
-					</a>
-				</li>
-			</ul>
-		</div>`
+						<div data-avatar-container :class="{ active: animate }">
+							<a data-avatar :href="linkdrip.profile.url" target="_blank">	
+								<img data-avatar :src="linkdrip.profile.image" />
+							</a>	
+							<div data-emblem>
+								<slot v-for="n in 1">{{'THIS NFT GIVES YOU POWER OVER METAMODERN TIMES'+' ! '}}</slot>
+							</div>
+						</div>
+
+					
+				</div>`
 });
 
 new Vue({

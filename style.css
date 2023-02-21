@@ -14,9 +14,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-
-
-
 html,body {
   font-size: 3.8vw;
   background: #000;
@@ -67,9 +64,6 @@ article [data-description] {
   position: relative;
   z-index: 5;
   font-size: 1rem;
-}
-article [data-links] {
-  margin: 2rem 0 2rem;
 }
 article [data-links] li {
   margin: 0 0 1rem 0;
@@ -211,6 +205,7 @@ article [data-links] li a [data-button-bg] {
   color: #fff;
   text-align: left;
   font-size: 3.8rem;
+  text-align: center;
 }
 [data-skin="SKIN_NAME"] [data-profile-container] [data-description] {
   color: #fff;
