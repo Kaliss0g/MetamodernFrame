@@ -63,7 +63,7 @@ Vue.component("linkdrip-skin", {
 			
 			
 			<div data-emblem>
-				<slot v-for="n in 1">{{'THIS NFT GIVES YOU MONEY AND POWER'+' ! '}}</slot>
+				<slot v-for="n in 1">{{'THIS NFT GIVES YOU POWER OVER METAMODERN TIMES'+' ! '}}</slot>
 			</div>
 		</div>
 
