@@ -54,7 +54,7 @@ Vue.component("linkdrip-skin", {
 						</div>
 						<p data-description v-text="linkdrip.profile.description.text"></p>		
 					</div>
-					
+					<div data-bot>
 						<ul data-links :class="{ active: animate }">
 							<li data-link-container v-for="link in linkdrip.links" v-if="link.label !== ''">
 								<a data-link :href="link.url" target="_blank">
@@ -64,6 +64,7 @@ Vue.component("linkdrip-skin", {
 							</li>
 						</ul>
 
+
 						<div data-avatar-container :class="{ active: animate }">
 							<a data-avatar :href="linkdrip.profile.url" target="_blank">	
 								<img data-avatar :src="linkdrip.profile.image" />
@@ -72,8 +73,7 @@ Vue.component("linkdrip-skin", {
 								<slot v-for="n in 1">{{'THIS NFT GIVES YOU POWER OVER METAMODERN TIMES'+' ! '}}</slot>
 							</div>
 						</div>
-
-					
+					</div>
 				</div>`
 });
 

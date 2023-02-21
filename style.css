@@ -112,19 +112,24 @@ article [data-links] li a [data-button-bg] {
   height: 100%;
 }
 
+[data-skin="SKIN_NAME"] [data-bot] {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+}
+
 [data-skin="SKIN_NAME"] [data-avatar-container] {
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
+  position: relative;
+  top: 1.2rem;
+  right: 1.2rem;
   transform: scale(0);
   transition: all 0.5s 1s;
 }
 @media screen and (min-width: 600px) {
   [data-skin="SKIN_NAME"] [data-avatar-container] {
-    position: absolute;
-    bottom: auto;
-    right: auto;
-    margin: 10rem 0 0 23rem;
+    position: relative;
+    top: 5.2rem;
+    right: 5.2rem;
   }
 }
 [data-skin="SKIN_NAME"] [data-avatar-container] [data-avatar] {
@@ -204,12 +209,12 @@ article [data-links] li a [data-button-bg] {
 [data-skin="SKIN_NAME"] [data-profile-container] [data-username] {
   color: #fff;
   text-align: left;
-  font-size: 3.8rem;
+  font-size: 2.7rem;
   text-align: center;
 }
 [data-skin="SKIN_NAME"] [data-profile-container] [data-description] {
   color: #fff;
-  text-align: right;
+  text-align: center;
   opacity: 0.8;
   font-size: .8rem;
   padding-top: .8rem;
