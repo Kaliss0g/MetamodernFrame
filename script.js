@@ -12,6 +12,7 @@ Vue.component("linkdrip-skin", {
 			this.startAnimations();
 		}, 100);
 	},
+
 	methods: {
 		startAnimations: function () {
 			this.animate = true;
@@ -36,21 +37,36 @@ Vue.component("linkdrip-skin", {
 			}
 		}
 	},
+
 	template: `<div data-container>
 		<div data-profile-container :class="{ active: animate }">
 				<h1 data-username v-text="linkdrip.profile.name.text"></h1>
+				<div data-stream>
+				<iframe 
+				src="https://lvpr.tv?v=7073hkosnniban7j" 
+				frameborder="0" 
+				allowfullscreen 
+				allow="autoplay; 
+				encrypted-media; 
+				picture-in-picture" 
+				sandbox="allow-scripts">
+				</iframe>
+				 </div>
 				<p data-description v-text="linkdrip.profile.description.text"></p>
-			</div>
+		</div>
+	
 			
-			<div data-avatar-container :class="{ active: animate }">
+		<div data-avatar-container :class="{ active: animate }">
 			<a data-avatar :href="linkdrip.profile.url" target="_blank">	
-			<img data-avatar :src="linkdrip.profile.image" />
-			</a>
-					
-				<div data-emblem>
-					<slot v-for="n in 1">{{'THIS NFT GIVES YOU MONEY AND POWER'+' ! '}}</slot>
-				</div>
+				<img data-avatar :src="linkdrip.profile.image" />
+			</a>		
+			
+			
+			<div data-emblem>
+				<slot v-for="n in 1">{{'THIS NFT GIVES YOU MONEY AND POWER'+' ! '}}</slot>
 			</div>
+		</div>
+
 			<ul data-links :class="{ active: animate }">
 				<li data-link-container v-for="link in linkdrip.links" v-if="link.label !== ''">
 					<a data-link :href="link.url" target="_blank">
@@ -59,7 +75,6 @@ Vue.component("linkdrip-skin", {
 					</a>
 				</li>
 			</ul>
-			
 		</div>`
 });
 
@@ -67,8 +82,8 @@ new Vue({
 	el: "#app",
 	data: {
 		search: new URLSearchParams(window.location.search),
-		visible: false,
-		linktree: false,
+		visible: true,
+		linktree: true,
 		linkdrip: {
 			skin: "SKIN_NAME",
 			profile: {
@@ -80,7 +95,7 @@ new Vue({
 				},
 				description: {
 					text:
-						"Satiric crowdsourced web3 media about Metaverse, Crypto, NFTs and other stuff that no one asked for. Find us on:"
+						"Television 3.0"
 				}
 			},
 
@@ -114,23 +129,3 @@ new Vue({
 		}
 	}
 });
-
-function pauseMusic() {
-	var audioPlayer = document.getElementById("audio-player");
-	var audioContainer = $("#music-container");
-
-	audioPlayer.pause();
-	audioContainer.addClass("music-player--disabled");
-
-	console.log("pause music");
-}
-
-function playMusic() {
-	var audioPlayer = document.getElementById("audio-player");
-	var audioContainer = $("#music-container");
-
-	audioPlayer.play();
-	audioContainer.removeClass("music-player--disabled");
-
-	console.log("play music");
-}
