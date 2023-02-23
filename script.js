@@ -122,6 +122,10 @@ new Vue({
 				{
 					url: "https://metamodern-times.crew3.xyz",
 					label: "Crew3"
+				},
+				{
+					url: "https://metamodern-times.xyz/TheBase",
+					label: "The Base"
 				}
 			]
 		}

@@ -57,7 +57,7 @@ article [data-avatar] {
 article [data-username] {
   position: relative;
   z-index: 5;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin: 0 0 0.25rem;
 }
 article [data-description] {
@@ -209,7 +209,7 @@ justify-content: space-between;
 [data-skin="SKIN_NAME"] [data-profile-container] [data-username] {
   color: #fff;
   text-align: left;
-  font-size: 2.7rem;
+  font-size: 10vw;
   text-align: center;
 }
 [data-skin="SKIN_NAME"] [data-profile-container] [data-description] {
