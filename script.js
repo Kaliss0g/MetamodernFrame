@@ -42,15 +42,9 @@ Vue.component("linkdrip-skin", {
 					<div data-profile-container :class="{ active: animate }">
 						<h1 data-username v-text="linkdrip.profile.name.text"></h1>
 						<div data-stream>
-							<iframe 
-							src="https://lvpr.tv?v=7073hkosnniban7j" 
-							frameborder="0" 
-							allowfullscreen 
-							allow="autoplay; 
-							encrypted-media; 
-							picture-in-picture" 
-							sandbox="allow-scripts">
-							</iframe>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/-9BVN6P1vQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 						</div>
 						<p data-description v-text="linkdrip.profile.description.text"></p>		
 					</div>
@@ -94,7 +88,7 @@ new Vue({
 				},
 				description: {
 					text:
-						"Television 3.0"
+						"Agregateur de contenu infodivertissent"
 				}
 			},
 

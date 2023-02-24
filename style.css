@@ -13,7 +13,7 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
-
+h1{text-align: center;}
 html,body {
   font-size: 3.8vw;
   background: #000;
@@ -193,9 +193,14 @@ justify-content: space-between;
 [data-skin="SKIN_NAME"] [data-avatar-container].active [data-avatar]:hover {
   transform: scale(1.2);
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   [data-skin="SKIN_NAME"] [data-avatar-container].active {
     transform: scale(1.6);
+    
+  }
+  [data-skin="SKIN_NAME"] [data-profile-container] [data-username] {
+    color: #fff;
+    font-size: 4rem;
   }
 }
 [data-skin="SKIN_NAME"] [data-profile-container] {
@@ -208,9 +213,8 @@ justify-content: space-between;
 }
 [data-skin="SKIN_NAME"] [data-profile-container] [data-username] {
   color: #fff;
-  text-align: left;
-  font-size: 10vw;
-  text-align: center;
+  font-size: 8vw;
+
 }
 [data-skin="SKIN_NAME"] [data-profile-container] [data-description] {
   color: #fff;
